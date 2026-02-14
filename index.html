@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card</title>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg, #667eea, #764ba2, #ff6a00);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  font-family:Arial, sans-serif;
+}
+
+/* Animated Gradient */
+@keyframes gradientMove {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.card{
+  background:#fff;
+  width:300px;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition:transform 0.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+}
+.card img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #667eea;
+}
+.card h2{
+  margin:10px 0 5px;
+}
+.card p{
+  font-size:14px;
+  color:#555;
+}
+.social{
+  margin-top:10px;
+}
+.social a{
+  margin:0 8px;
+  font-size:24px;
+  text-decoration:none;
+  color:#0077b5;
+  transition:0.3s;
+}
+.social a:hover{
+  color:#005582;
+}
+@media(max-width:480px){
+  .card{ width:90%; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://media.licdn.com/dms/image/v2/D4E03AQHMVUR4r_OmOg/profile-displayphoto-scale_400_400/B4EZiENa0tGYAg-/0/1754564775098?e=1772668800&v=beta&t=5B-evQiyuIA_AGjlXvhYVsJo08y0j5hP5TE5tfuskPc" alt="Profile">
+  <h2>Harshit Gangwar</h2>
+  <p>Web Developer<br>Learning HTML & CSS</p>
+
+  <div class="social">
+    <a href="https://www.linkedin.com/in/harshit-gangwar-157b89258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
